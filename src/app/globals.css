@@ -24,3 +24,124 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Ensure slide containers are properly isolated for export */
+[data-slide-container] {
+  position: relative !important;
+  display: block !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  width: 960px !important;
+  height: 540px !important;
+}
+
+/* Override any oklch colors with standard hex colors for html2canvas compatibility */
+[data-slide-container] * {
+  /* Force standard colors for export compatibility */
+  --tw-bg-opacity: 1 !important;
+  --tw-text-opacity: 1 !important;
+  box-sizing: border-box !important;
+}
+
+/* Hide elements marked for export exclusion */
+[data-export-ignore] {
+  /* These elements will be filtered out during export */
+  pointer-events: none;
+}
+
+/* Override specific Tailwind colors that might use oklch */
+[data-slide-container] .bg-white {
+  background-color: #ffffff !important;
+}
+
+[data-slide-container] .bg-gray-100 {
+  background-color: #f3f4f6 !important;
+}
+
+[data-slide-container] .bg-gray-300 {
+  background-color: #d1d5db !important;
+}
+
+[data-slide-container] .bg-blue-500 {
+  background-color: #3b82f6 !important;
+}
+
+[data-slide-container] .bg-red-50 {
+  background-color: #fef2f2 !important;
+}
+
+[data-slide-container] .bg-yellow-50 {
+  background-color: #fffbeb !important;
+}
+
+[data-slide-container] .bg-indigo-50 {
+  background-color: #eef2ff !important;
+}
+
+[data-slide-container] .bg-green-50 {
+  background-color: #f0fdf4 !important;
+}
+
+[data-slide-container] .bg-purple-50 {
+  background-color: #faf5ff !important;
+}
+
+[data-slide-container] .bg-orange-50 {
+  background-color: #fff7ed !important;
+}
+
+[data-slide-container] .text-gray-800 {
+  color: #1f2937 !important;
+}
+
+[data-slide-container] .text-gray-700 {
+  color: #374151 !important;
+}
+
+[data-slide-container] .text-gray-600 {
+  color: #4b5563 !important;
+}
+
+[data-slide-container] .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+[data-slide-container] .text-white {
+  color: #ffffff !important;
+}
+
+[data-slide-container] .text-red-800 {
+  color: #991b1b !important;
+}
+
+[data-slide-container] .text-yellow-800 {
+  color: #92400e !important;
+}
+
+[data-slide-container] .text-indigo-800 {
+  color: #3730a3 !important;
+}
+
+[data-slide-container] .text-blue-800 {
+  color: #1e40af !important;
+}
+
+[data-slide-container] .text-green-800 {
+  color: #166534 !important;
+}
+
+[data-slide-container] .text-purple-800 {
+  color: #6b21a8 !important;
+}
+
+[data-slide-container] .text-orange-800 {
+  color: #9a3412 !important;
+}
+
+[data-slide-container] .text-blue-600 {
+  color: #2563eb !important;
+}
+
+[data-slide-container] .border-gray-300 {
+  border-color: #d1d5db !important;
+}
